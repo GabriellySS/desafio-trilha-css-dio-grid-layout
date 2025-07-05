@@ -1,0 +1,148 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template:
+    "header header" 56px
+    "nav main" 1fr
+    / 1fr 4fr;
+  gap: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #fff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-left img {
+  height: 20px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-center input {
+  width: 348px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  padding-left: 8px;
+}
+
+.header-center input:focus {
+  outline: none;
+  border-color: #3ea6ff;
+}
+
+.header-center button {
+  width: 57px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav {
+  height: 100%;
+  grid-area: nav;
+  padding: 24px;
+  background-color: #fff;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+nav ul li span {
+  font-weight: 700;
+}
+
+main {
+  grid-area: main;
+  padding: 24px 28px;
+  display: grid;
+  grid: repeat(3, 262px) / repeat(4, 1fr);
+  gap: 14px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+}
+
+.main-item-info {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  gap: 10px;
+}
+
+.main-item-info img {
+  width: 42px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.main-item-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-item-texts h3 {
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.main-item-texts p {
+  color: #515151;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
